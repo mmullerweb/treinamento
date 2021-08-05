@@ -17,3 +17,6 @@ type() = verifica o tipo dentro da variavel
 \* multiplicacao
 
 / divisao
+
+
+while (enquanto condição for verdadeira faz a repetição)
