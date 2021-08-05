@@ -1,6 +1,6 @@
 # Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
 
-raio = input ("Qual o valor do raio de um circulo? ")
+raio = input ("Qual a medida do raio de um circulo? ")
 # Area = TT * raio2
 
 pi = 3.14
