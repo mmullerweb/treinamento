@@ -1,8 +1,11 @@
 # Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
 
-raio = input ("Qual o valor do raio? ")
+raio = input ("Qual o valor do raio de um circulo? ")
+# Area = TT * raio2
 
-circulo = int (raio) * 2 * 3
+pi = 3.14
 
-print (" A area do circulo e: " + str (circulo))
+area = float (pi) * float (raio) * float (raio)
+
+print (" A area do circulo e: " + str (area))
 
