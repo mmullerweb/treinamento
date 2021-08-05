@@ -20,3 +20,7 @@ type() = verifica o tipo dentro da variavel
 
 
 while (enquanto condição for verdadeira faz a repetição)
+
+python -m pip install nome-modulo (Instalando modulo dentro do python)
+ex.: python -m pip install flask
+ex.: python -m pip install pymysql
