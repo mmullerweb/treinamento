@@ -4,4 +4,4 @@
 nota = 0
 while (nota >= 0 and nota <= 10):
     nota = int (input("Informe a nota... "))
-print ("Nota nao valida")
+print ("Nota nao valida ")
