@@ -20,17 +20,16 @@ def subtracao():
     return "Subtracao é: " + str(subtracao)
 
 @app.route("/multiplicacao")
-def multiplicacao():
+def subtracao():
     a = request.args.get("a")
     b = request.args.get("b")
     multiplicacao = int(a) * int(b)
-    return "Multiplicacao é: " + str(multiplicacao)
+    return "multiplicacao é: " + str(multiplicacao)
 
 @app.route("/divisao")
-def divisao():
+def subtracao():
     a = request.args.get("a")
     b = request.args.get("b")
-    divisao = int(a) / int(b)
-    return "Divisao é: " + str(divisao)
+    divisao = int(a) * int(b)
+    return "divisao é: " + str(divisao)
 # Rodar comando (flask run)
-
