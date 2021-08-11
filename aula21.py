@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route("/soma")
 def soma():
+    ###### validar se e vazio retornando mensagem para tela
     a = request.args.get("a")
     b = request.args.get("b")
     soma = int(a) + int(b)
