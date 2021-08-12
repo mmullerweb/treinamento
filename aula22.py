@@ -17,3 +17,9 @@ def criar():
     cursor.execute(sql,(nome,data_nascimento))
     conn.commit()
     return "OK"
+
+@app.route("/pessoa/lista")
+def lista():
+    sql = "SELECT * FROM pessoa"
+    cursor.execute(sql)
+    result = cursor.fetchall()
