@@ -24,10 +24,14 @@ def lista():
     cursor.execute(sql)
     resultado = cursor.fetchall()
     
-    html = "<h1>Lista de pessoas</h1>"
-    html = html + "<hr/>"
+    html = f'''
+    <h1>Lista de pessoas</h1>
+    <hr/>
+
+    '''
     for r in resultado:
-        html = html + "Nome: " + r['nome'] + " / " + "Data Nascimento: " + str(r['data_nascimento']) + "<br/>"     
+        html = f"{html} Nome: {r['nome']} / Data Nascimento: {str(r['data_nascimento'])} <a href='http://localhost:5000/pessoa/deletar?id={r['id']}'>Deletar</a> <br/>"
+
 
     #print(resultado)
     return html
