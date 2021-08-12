@@ -9,6 +9,10 @@ def soma():
     ###### validar se e vazio retornando mensagem para tela
     a = request.args.get("a")
     b = request.args.get("b")
+    if a == "":
+        return "Nao valido"
+    if b == "":
+        return "Nao valido"
     soma = int(a) + int(b)
     return "Soma é: " + str(soma)
 
@@ -16,20 +20,32 @@ def soma():
 def subtracao():
     a = request.args.get("a")
     b = request.args.get("b")
+    if a == "":
+        return "Nao valido"
+    if b == "":
+        return "Nao valido"
     subtracao = int(a) - int(b)
     return "Subtracao é: " + str(subtracao)
 
 @app.route("/multiplicacao")
-def subtracao():
+def multiplicacao():
     a = request.args.get("a")
     b = request.args.get("b")
+    if a == "":
+        return "Nao valido"
+    if b == "":
+        return "Nao valido"
     multiplicacao = int(a) * int(b)
     return "multiplicacao é: " + str(multiplicacao)
 
 @app.route("/divisao")
-def subtracao():
+def divisao():
     a = request.args.get("a")
     b = request.args.get("b")
-    divisao = int(a) * int(b)
+    if a == "":
+        return "Nao valido"
+    if b == "":
+        return "Nao valido"
+    divisao = int(a) / int(b)
     return "divisao é: " + str(divisao)
 # Rodar comando (flask run)
