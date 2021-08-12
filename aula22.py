@@ -22,4 +22,16 @@ def criar():
 def lista():
     sql = "SELECT * FROM pessoa"
     cursor.execute(sql)
-    result = cursor.fetchall()
+    resultado = cursor.fetchall()
+    
+    html = f'''
+    <h1>Lista de pessoas</h1>
+    <hr/>
+    '''
+    for r in resultado:
+        html = f"{html} Nome: {r['nome']} / Data Nascimento: {str(r['data_nascimento'])} <a href='http://localhost:5000/pessoa/deletar?id={r['id']}'>Deletar</a> <br/>"
+        sql = "DELETE FROM pessoa WHERE id"
+    return html
+
+    #print(resultado)
+    return html
