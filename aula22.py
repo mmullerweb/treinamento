@@ -17,3 +17,17 @@ def criar():
     cursor.execute(sql,(nome,data_nascimento))
     conn.commit()
     return "OK"
+
+@app.route("/pessoa/lista")
+def lista():
+    sql = "SELECT * FROM pessoa"
+    cursor.execute(sql)
+    resultado = cursor.fetchall()
+    
+    html = "<h1>Lista de pessoas</h1>"
+    html = html + "<hr/>"
+    for r in resultado:
+        html = html + "Nome: " + r['nome'] + " / " + "Data Nascimento: " + str(r['data_nascimento']) + "<br/>"     
+
+    #print(resultado)
+    return html
