@@ -30,7 +30,8 @@ def lista():
     '''
     for r in resultado:
         html = f"{html} Nome: {r['nome']} / Data Nascimento: {str(r['data_nascimento'])} <a href='http://localhost:5000/pessoa/deletar?id={r['id']}'>Deletar</a> <br/>"
-        sql = "DELETE FROM pessoa WHERE id"
+        sql = "DELETE FROM pessoa WHERE id = 38"
+        cursor.execute(sql)
     return html
 
     #print(resultado)
